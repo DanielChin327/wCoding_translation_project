@@ -3,14 +3,46 @@ body{
   padding:0;
 }
 
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+
+.translation{
+  display:flex;
+
+}
+
 #englishInput{
   width: 300px;
   height: 100px;
   resize: none; /* Disable resizing */
+  margin: 12px;
+  border-radius:8px;
 }
 
-.output{
+.textResult{
   width: 300px;
   height: 100px;
   border: 1px solid black;
+  margin: 12px;
+  border-radius:8px;
 }
