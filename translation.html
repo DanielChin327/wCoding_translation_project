@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Al Bhed Primer</title>
 
-
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Marcellus&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 
 
@@ -13,9 +16,6 @@
 </head>
 <body>
 <div class="container">
-  <h1>Al Bhed Primer</h1>
-  <h3>English to Al Bhed</h3>
-
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/images/ffx01.jpg);">
     <div class="container">
       <h1>Al Bhed Primer</h1>
@@ -24,6 +24,7 @@
     </div>
   </div>
 
+  <div class="main">
 <h2>What is the Al Bhed Language? </h2>
 <p>The Al Bhed language is a constructed language used by the Al Bhed tribe in the video game "Final Fantasy X." It is essentially a substitution cipher of the English language, where each letter in the English alphabet is replaced with a corresponding letter in the Al Bhed alphabet. This makes it relatively straightforward to translate between English and Al Bhed, once you have the substitution key.</p>
 
@@ -41,6 +42,31 @@
   <li><b>Construct the Sentence:</b> Combine the substituted letters to form the translated text.</li>
 </ul>
 
+<table>
+  <thead>
+    <tr>
+      <th>English</th>
+      <th>Al Bhed</th>
+      <th>English</th>
+      <th>Al Bhed</th>
+      <th>English</th>
+      <th>Al Bhed</th>
+      <th>English</th>
+      <th>Al Bhed</th>
+    </tr>
+  </thead>
+  <tbody class = 'characters'>
+    <tr><td>A</td><td>Y</td><td>B</td><td>P</td><td>C</td><td>L</td><td>D</td><td>T</td></tr>
+    <tr><td>E</td><td>A</td><td>F</td><td>V</td><td>G</td><td>K</td><td>H</td><td>R</td></tr>
+    <tr><td>I</td><td>E</td><td>J</td><td>Z</td><td>K</td><td>G</td><td>L</td><td>M</td></tr>
+    <tr><td>M</td><td>S</td><td>N</td><td>H</td><td>O</td><td>U</td><td>P</td><td>B</td></tr>
+    <tr><td>Q</td><td>X</td><td>R</td><td>N</td><td>S</td><td>C</td><td>T</td><td>D</td></tr>
+    <tr><td>U</td><td>I</td><td>V</td><td>J</td><td>W</td><td>F</td><td>X</td><td>Q</td></tr>
+    <tr><td>Y</td><td>O</td><td>Z</td><td>W</td></tr>
+  </tbody>
+</table>
+
+<h3>Try it out yourself!</h3>
 <div class="translation">
 <form action="">
   <textarea type="text" id="englishInput" placeholder="English to Al Bhed" rows="4" cols="50"></textarea>
@@ -48,6 +74,7 @@
 <div class= 'textResult'></div>
 </div>
 
+</div>
 </div>
     <script src="/translation.js"></script>
 </body>

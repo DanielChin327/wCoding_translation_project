@@ -1,12 +1,21 @@
 body{
   margin:0;
   padding:0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
+.main{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  height:300px;
 }
 
 .banner h1 {
@@ -15,6 +24,7 @@ body{
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+
 }
 
 .banner p {
@@ -26,22 +36,25 @@ body{
 
 
 
+.characters tr{
+  padding:2px;
+}
+
 .translation{
   display:flex;
-
 }
 
 #englishInput{
-  width: 300px;
-  height: 100px;
+  width: 400px;
+  height: 200px;
   resize: none; /* Disable resizing */
   margin: 12px;
   border-radius:8px;
 }
 
 .textResult{
-  width: 300px;
-  height: 100px;
+  width: 400px;
+  height: 204px;
   border: 1px solid black;
   margin: 12px;
   border-radius:8px;
