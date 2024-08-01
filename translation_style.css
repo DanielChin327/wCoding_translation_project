@@ -1,0 +1,16 @@
+body{
+  margin:0;
+  padding:0;
+}
+
+#englishInput{
+  width: 300px;
+  height: 100px;
+  resize: none; /* Disable resizing */
+}
+
+.output{
+  width: 300px;
+  height: 100px;
+  border: 1px solid black;
+}
