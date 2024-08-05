@@ -3,28 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- google fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Marcellus&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <title>Game</title>
   <link rel="stylesheet" href="/game_page/game_style.css">
 </head>
 <body>
 
 <div class="container">
-  <a class="home_link" href="/front_page/translation.html">Back to Home</a>
+  <button><a class="home_link" href="/front_page/translation.html">Back to Home</a></button>
+  <button id="reset_button">Reset High Score</button>
   <div class="game_container">
 <h1>Al Bhed Quiz Game</h1>
-  <div class = 'score_board'>
-    <h3>High Score:</h3>
-    <div id = "high_score">0</div>
-    </div>
 
-<div id = "timer_display"></div>
+
+<div class="game_info">
+<div class = 'score_board'>
+  <h3>High Score:</h3>
+  <div id = "high_score">0</div>
+  </div>
+
+<div class="timer">
+  <h3>Timer: </h3>
+  <div id = "timer_display"></div>
+</div>
+</div>
+
+
 <button id="start_button">Word</button>
+
+
+
 <div class="question"></div>
 
 <div class="answer">
   <form id="form" action="">
     <fieldset>
-      <legend>Type Here</legend>
+      <legend>Translate:</legend>
       <input id="input-area" type="text"></input>
       <button id="submit" type="submit">Submit</button>
     </fieldset>
