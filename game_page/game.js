@@ -50,3 +50,8 @@ function counterReset() {
   let counter = document.querySelector('.counter')
   counter.innerText = 0;
 }
+
+function timer() {
+  let count = 10;
+  count
+}
