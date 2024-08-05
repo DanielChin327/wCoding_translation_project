@@ -7,7 +7,7 @@ const startButton = document.querySelector('#start_button')
 const form = document.querySelector('form')
 const input = document.querySelector('#input-area')
 const submit = document.querySelector("#submit")
-const output = document.querySelector('#output')
+
 const counter = document.querySelector('.counter')
 
 startButton.addEventListener('click', function(){
@@ -21,10 +21,21 @@ startButton.addEventListener('click', function(){
   })
 })
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const text = input.value.toLowerCase();
-    if(text === answer) {
+form.addEventListener('submit', answerQuestion())
+
+})
+
+
+
+function answerQuestion() {
+    const questionClass = document.querySelector('.question')
+    text = questionClass.innerText
+    const output = document.querySelector('#output')
+
+    if (questionClass.innerText.length == 0) {
+      output.innerText = 'Game has not started. Press the Start Button'
+    }
+    else if(text === answer) {
       output.innerText = `Correct! the answer was ${answer}!`
       counterUp();
     }
@@ -32,10 +43,7 @@ startButton.addEventListener('click', function(){
       output.innerText = `Incorrect....`
       counterReset()
     }
-  })
-})
-
-
+  }
 
 function randomNumber (array) {
   return Math.floor(Math.random() * array.length)
