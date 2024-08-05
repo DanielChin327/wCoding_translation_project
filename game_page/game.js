@@ -37,7 +37,7 @@ function answerQuestion(event) {
   const output = document.querySelector('#output');
 
   if (text.length == 0) {
-    output.innerText = 'Game has not started. Press the Start Button';
+    output.innerText = 'Game has not started. Press the Word Button';
   } else if (answer === userAnswer) { // Compare with the global answer variable
     output.innerText = `Correct! The answer was ${answer}!`;
     counterUp();
@@ -83,6 +83,8 @@ function startTimer(duration, display) {
     if (--timerDuration < 0) {
       clearInterval(timer);
       alert('Time is up!');
+      counterReset();
     }
   }, 1000);
+
 }

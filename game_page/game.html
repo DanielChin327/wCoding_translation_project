@@ -7,20 +7,25 @@
   <link rel="stylesheet" href="/game_page/game_style.css">
 </head>
 <body>
-<div class = 'score_board'>
-<h3>High Score:</h3>
-<div id = "high_score">0</div>
-</div>
+
+<div class="container">
+  <a class="home_link" href="/front_page/translation.html">Back to Home</a>
+  <div class="game_container">
+<h1>Al Bhed Quiz Game</h1>
+  <div class = 'score_board'>
+    <h3>High Score:</h3>
+    <div id = "high_score">0</div>
+    </div>
 
 <div id = "timer_display"></div>
-<button id="start_button">Start</button>
+<button id="start_button">Word</button>
 <div class="question"></div>
 
 <div class="answer">
   <form id="form" action="">
     <fieldset>
       <legend>Type Here</legend>
-      <textarea id="input-area" type="text"></textarea>
+      <input id="input-area" type="text"></input>
       <button id="submit" type="submit">Submit</button>
     </fieldset>
   </form>
@@ -32,6 +37,8 @@
   <h3>Win Streak: <span class="counter">0</span></h3>
 </div>
 
+</div>
+</div>
 <script src="/game_page/game.js"></script>
 </body>
 </html>
