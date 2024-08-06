@@ -71,11 +71,14 @@ function randomNumber(array) {
 function counterUp() {
   let counter = document.querySelector('.counter');
   counter.innerText = parseInt(counter.innerText) + 1;
+}
 
+function checkHighScore() {
+  let counter = document.querySelector('.counter');
   if (parseInt(counter.innerText) > highScore) {
-    highScore = parseInt(counter.innerText);
-    document.querySelector('#high_score').innerText = highScore;
-    localStorage.setItem('highScore', highScore); // Save high score to local storage
+  highScore = parseInt(counter.innerText);
+  document.querySelector('#high_score').innerText = highScore;
+  localStorage.setItem('highScore', highScore); // Save high score to local storage
   }
 }
 
@@ -90,15 +93,13 @@ function startTimer(duration, display) {
   timer = setInterval(function() { // Assign to global timer variable
     minutes = parseInt(timerDuration / 60, 10);
     seconds = parseInt(timerDuration % 60, 10);
-
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
-
     display.innerText = minutes + ":" + seconds;
-
     if (--timerDuration < 0) {
       clearInterval(timer);
       alert('Time is up!');
+      checkHighScore();
       counterReset();
     }
   }, 1000);
