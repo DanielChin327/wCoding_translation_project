@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   timerDisplay = document.querySelector('#timer_display');
   const startButton = document.querySelector('#start_button');
   const form = document.querySelector('form');
-  let resetButton = document.querySelector("#reset_button");
+  const resetButton = document.querySelector("#reset_button");
 
   // How to save high score
   if (localStorage.getItem('highScore')) {
@@ -17,13 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   startButton.addEventListener('click', makeQuestion);
   form.addEventListener('submit', answerQuestion);
-
-  resetButton.addEventListener('click', function() {
-    localStorage.removeItem('highScore'); // Remove high score from local storage
-    highScore = 0;
-    document.querySelector('#high_score').innerText = highScore; // Update the displayed high score
-  });
+  resetButton.addEventListener('click', resetHighScore)
 });
+
+
 
 function makeQuestion() {
   if (timer != 0) {
@@ -85,6 +82,12 @@ function checkHighScore() {
 function counterReset() {
   let counter = document.querySelector('.counter');
   counter.innerText = 0;
+}
+
+function resetHighScore() {
+  localStorage.removeItem('highScore'); // Remove high score from local storage
+  highScore = 0;
+  document.querySelector('#high_score').innerText = highScore; // Update the displayed high score
 }
 
 function startTimer(duration, display) {
